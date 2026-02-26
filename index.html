@@ -12,7 +12,41 @@
             height: 100%;
             width: 100%;
             overflow: hidden; /* Prevents scrollbars on all resolutions */
-            background-color: #F3EBE0; /* Matched creamy, textured background color sampled from the image */
+            /* Matched creamy background color sampled from the image texture */
+            background-color: #F1EADE; <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Physio Room - Coming Soon</title>
+    <style>
+        /* Basic Reset and Setup */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrollbars on all resolutions */
+            /* Matched creamy background color sampled from the image texture */
+            background-color: #F1EADE; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Full Screen Image Styling with Containment */
+        img {
+            width: 100vw; /* Take full viewport width */
+            height: 100vh; /* Take full viewport height */
+            object-fit: contain; /* The key property: fits the whole image without cropping, centers it, and matches aspect ratio */
+            display: block; /* Removes baseline space */
+        }
+    </style>
+</head>
+<body>
+    <img src="Banner.png" alt="Coming Soon Banner for The Physio Room">
+</body>
+</html>
             display: flex;
             justify-content: center;
             align-items: center;
