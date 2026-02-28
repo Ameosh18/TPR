@@ -54,9 +54,17 @@ body {
 }
 
 .logo img {
-    height: 60px; /* Adjust this number to make your logo bigger or smaller */
-    width: auto;  /* Keeps the logo's original proportions */
+    height: 60px; 
+    width: auto;  
     object-fit: contain;
+    /* This tells the browser to smoothly animate any changes over 0.3 seconds */
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+/* This is the new hover effect */
+.logo:hover img {
+    transform: scale(1.05); /* Makes the logo 5% bigger */
+    opacity: 0.8;           /* Fades it slightly to 80% visibility */
 }
 
 .nav-links {
