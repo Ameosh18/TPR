@@ -1,5 +1,5 @@
 import HeroSection from './sections/HeroSection'
-import WhoItsFor from './sections/WhoItsFor'
+import StatsStrip from './sections/StatsStrip'
 import TPRDifference from './sections/TPRDifference'
 import MeetDrOshin from './sections/MeetDrOshin'
 import ConditionsTeaser from './sections/ConditionsTeaser'
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <WhoItsFor />
+      <StatsStrip />
       <TPRDifference />
       <MeetDrOshin />
       <ConditionsTeaser />

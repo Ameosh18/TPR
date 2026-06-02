@@ -1,36 +1,80 @@
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
-import SectionWrapper from '../../../components/SectionWrapper/SectionWrapper'
 import styles from './MeetDrOshin.module.css'
+
+const features = [
+  { icon: '🤝', title: 'Expert Team', body: 'Highly trained physiotherapists specialising in diverse treatments.' },
+  { icon: '📋', title: 'Personalised Plans', body: 'Treatment plans designed around your condition and goals.' },
+  { icon: '📈', title: 'Measurable Results', body: 'You can track your progress as you improve mobility and reduce pain.' },
+  { icon: '🌿', title: 'Holistic Care', body: 'Addressing posture, movement, and overall body function.' },
+]
 
 export default function MeetDrOshin() {
   return (
-    <SectionWrapper>
-      <div className={styles.grid}>
-        <FadeUp className={styles.photoWrap}>
-          <div className={styles.photo}>
+    <section className={styles.section}>
+      <div className={`container ${styles.grid}`}>
+
+        {/* Left — photo */}
+        <FadeUp className={styles.photoCol}>
+          <div className={styles.photoMain}>
             <div className={styles.photoPlaceholder}>
               <span>Dr. Oshin</span>
               <span className={styles.photoNote}>Portrait photo coming soon</span>
             </div>
           </div>
         </FadeUp>
-        <FadeUp className={styles.bio}>
-          <span className={`label ${styles.tag}`}>Founder & Physiotherapist</span>
-          <h2 className={`heading-section ${styles.name}`}>Dr. Oshin Ninawe Kulkarni</h2>
-          <p className={`heading-sub ${styles.creds}`}>BPT · 9+ years of clinical experience</p>
-          <p className={styles.para}>
-            Dr. Oshin started The Physio Room after nearly a decade in clinical practice — long enough to see what standard physiotherapy was getting right, and what it was consistently getting wrong. Too many patients were leaving with exercises they didn't understand, from conditions that hadn't been properly explained.
-          </p>
-          <p className={styles.para}>
-            TPR was built on a different premise: that people heal better when they understand their own body. Every session at the clinic starts with listening — not prescribing.
-          </p>
-          <p className={styles.para}>
-            With 9+ years of hands-on clinical experience, a background in manual therapy, and a particular interest in sports rehab and postural correction, Dr. Oshin works with everyone from competitive athletes to seniors who want to move through their day without pain.
-          </p>
-          <Button href="/about" variant="primary">Read her story →</Button>
+
+        {/* Right — content */}
+        <FadeUp className={styles.contentCol}>
+          <span className={styles.tag}>· About Us</span>
+          <h2 className={styles.heading}>
+            Advanced Care Solutions In<br />
+            <em>Physiotherapy Care</em>
+          </h2>
+
+          <div className={styles.mvRow}>
+            <div className={styles.mvCard}>
+              <span className={styles.mvIcon}>🎯</span>
+              <div>
+                <h4 className={styles.mvTitle}>Mission</h4>
+                <p className={styles.mvText}>
+                  To provide evidence-based physiotherapy care focused on recovery, mobility, and adding physical well-being for all patients.
+                </p>
+              </div>
+            </div>
+            <div className={styles.mvCard}>
+              <span className={styles.mvIcon}>👁️</span>
+              <div>
+                <h4 className={styles.mvTitle}>Vision</h4>
+                <p className={styles.mvText}>
+                  To be a trusted provider of physiotherapy care that helps individuals move better and live with confidence at every stage of life.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <Button href="/about" variant="primary">About More →</Button>
         </FadeUp>
       </div>
-    </SectionWrapper>
+
+      {/* Features row + second photo */}
+      <div className={`container ${styles.bottomRow}`}>
+        <div className={styles.featuresGrid}>
+          {features.map((f, i) => (
+            <div key={i} className={styles.featureItem}>
+              <span className={styles.featureIcon}>{f.icon}</span>
+              <h4 className={styles.featureTitle}>{f.title}</h4>
+              <p className={styles.featureBody}>{f.body}</p>
+            </div>
+          ))}
+        </div>
+        <div className={styles.photoSecondary}>
+          <div className={styles.photoPlaceholder2}>
+            <span>Clinic</span>
+            <span className={styles.photoNote}>Session photo coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

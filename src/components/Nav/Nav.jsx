@@ -36,8 +36,8 @@ export default function Nav() {
           ))}
         </ul>
 
-        <Button href="/contact" variant="cream" className={styles.cta}>
-          Contact Us
+        <Button href="https://wa.link/bddr6y" variant="primary" className={styles.cta}>
+          Book Appointment
         </Button>
 
         <button
@@ -65,7 +65,7 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <Button href="/contact" variant="cream" className={styles.overlayBtn} onClick={() => setMenuOpen(false)}>
+              <Button href="https://wa.link/bddr6y" variant="primary" className={styles.overlayBtn} onClick={() => setMenuOpen(false)}>
                 Contact Us
               </Button>
             </li>
