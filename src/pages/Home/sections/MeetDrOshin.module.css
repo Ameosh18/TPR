@@ -154,7 +154,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(160deg, #c8d4b8 0%, #9ab880 100%);
+  background: linear-gradient(160deg, #cce88a 0%, #9dc83a 100%);
   font-family: var(--font-heading);
   font-size: 20px;
   color: var(--brand-dark);
