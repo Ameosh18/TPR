@@ -1,16 +1,16 @@
 /* ─── Brand Tokens ─────────────────────────────────────────────────────────── */
 :root {
-  --brand-primary:  #8DC63F;
-  --brand-light:    #A8D85A;
-  --brand-dark:     #5C8C1A;
-  --light-bg:       #F4F9EC;
-  --light-border:   #D8EBB8;
-  --dark-bg:        #1A1E12;
-  --dark-surface:   #222818;
-  --text-primary:   #1A1E12;
-  --text-muted:     #6B7160;
-  --text-on-dark:   #F4F9EC;
-  --gradient:       linear-gradient(165deg, #5C8C1A 0%, #8DC63F 50%, #A8D85A 100%);
+  --brand-primary:  #A8CC78;
+  --brand-light:    #C4DE9A;
+  --brand-dark:     #2C5016;
+  --light-bg:       #F2F7EA;
+  --light-border:   #D4E8B0;
+  --dark-bg:        #1C2E10;
+  --dark-surface:   #243814;
+  --text-primary:   #1C2E10;
+  --text-muted:     #617055;
+  --text-on-dark:   #F2F7EA;
+  --gradient:       linear-gradient(135deg, #1C2E10 0%, #2C5016 40%, #4A7C28 70%, #A8CC78 100%);
 
   --font-heading: 'Lora', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;

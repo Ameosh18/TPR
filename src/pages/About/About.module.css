@@ -1,7 +1,7 @@
 .hero {
-  background: var(--dark-bg);
+  background: linear-gradient(150deg, #1C2E10 0%, #2C5016 45%, #6B9E38 80%, #A8CC78 100%);
   padding: 160px 0 96px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(168,204,120,0.15);
 }
 
 .heroInner { max-width: 800px; }
