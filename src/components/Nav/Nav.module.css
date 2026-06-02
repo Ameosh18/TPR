@@ -53,6 +53,45 @@
 .active::after { right: 0; }
 .active { color: var(--brand-dark); font-weight: 600; }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f4f9ec;
+  border: 1.5px solid var(--brand-primary);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s;
+}
+.langToggle:hover { background: var(--light-border); }
+
+.langActive   { color: var(--brand-dark); }
+.langInactive { color: #aaa; }
+.langDivider  { color: #ccc; margin: 0 1px; }
+
+.overlayLangToggle {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
 .cta { flex-shrink: 0; }
 
 .hamburger {

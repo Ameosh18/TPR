@@ -2,6 +2,7 @@ import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Nav from './components/Nav/Nav'
 import Footer from './components/Footer/Footer'
+import { LanguageProvider } from './contexts/LanguageContext'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Conditions from './pages/Conditions/Conditions'
@@ -34,6 +35,7 @@ function Layout() {
 
 export default function App() {
   return (
+    <LanguageProvider>
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
@@ -45,5 +47,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
+    </LanguageProvider>
   )
 }

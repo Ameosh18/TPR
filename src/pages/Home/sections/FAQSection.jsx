@@ -1,29 +1,25 @@
 import { useState } from 'react'
-import { faqs } from '../../../data/faq'
+import { useLanguage } from '../../../contexts/LanguageContext'
 import styles from './FAQSection.module.css'
 
 export default function FAQSection() {
   const [open, setOpen] = useState(null)
-  const visible = faqs.slice(0, 5)
+  const { t } = useLanguage()
+  const f = t.faq
 
   return (
     <section className={styles.section}>
       <div className={`container ${styles.grid}`}>
-
         <div className={styles.left}>
-          <span className={styles.tag}>· FAQ</span>
+          <span className={styles.tag}>{f.tag}</span>
           <h2 className={styles.heading}>
-            Frequently Asked<br />
-            <em>Questions</em>
+            {f.heading1}<br /><em>{f.heading2}</em>
           </h2>
-          <p className={styles.sub}>
-            Find answers to common questions about physiotherapy,
-            your care and recovery process.
-          </p>
+          <p className={styles.sub}>{f.sub}</p>
         </div>
 
         <div className={styles.right}>
-          {visible.map((item, i) => (
+          {f.items.map((item, i) => (
             <div key={i} className={`${styles.item} ${open === i ? styles.itemOpen : ''}`}>
               <button
                 className={styles.question}
@@ -33,13 +29,10 @@ export default function FAQSection() {
                 <span>{item.q}</span>
                 <span className={styles.icon}>{open === i ? '−' : '+'}</span>
               </button>
-              {open === i && (
-                <p className={styles.answer}>{item.a}</p>
-              )}
+              {open === i && <p className={styles.answer}>{item.a}</p>}
             </div>
           ))}
         </div>
-
       </div>
     </section>
   )

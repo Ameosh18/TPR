@@ -1,19 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from '../Button/Button'
+import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Nav.module.css'
-
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/services', label: 'Services' },
-  { to: '/conditions', label: 'Conditions' },
-  { to: '/process', label: 'Process' },
-  { to: '/blog', label: 'Blog' },
-]
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { lang, toggle, t } = useLanguage()
+
+  // Set <html lang> for Devanagari font switching
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
+  const links = [
+    { to: '/',           label: t.nav.home },
+    { to: '/about',      label: t.nav.about },
+    { to: '/services',   label: t.nav.services },
+    { to: '/conditions', label: t.nav.conditions },
+    { to: '/process',    label: t.nav.process },
+    { to: '/blog',       label: t.nav.blog },
+  ]
 
   return (
     <nav className={styles.nav}>
@@ -36,9 +43,16 @@ export default function Nav() {
           ))}
         </ul>
 
-        <Button href="https://wa.link/bddr6y" variant="primary" className={styles.cta}>
-          Book Appointment
-        </Button>
+        <div className={styles.actions}>
+          <button className={styles.langToggle} onClick={toggle} aria-label="Switch language">
+            <span className={lang === 'en' ? styles.langActive : styles.langInactive}>EN</span>
+            <span className={styles.langDivider}>|</span>
+            <span className={lang === 'mr' ? styles.langActive : styles.langInactive}>मर</span>
+          </button>
+          <Button href="https://wa.link/bddr6y" variant="primary" className={styles.cta}>
+            {t.nav.bookAppointment}
+          </Button>
+        </div>
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
@@ -66,8 +80,15 @@ export default function Nav() {
             ))}
             <li>
               <Button href="https://wa.link/bddr6y" variant="primary" className={styles.overlayBtn} onClick={() => setMenuOpen(false)}>
-                Contact Us
+                {t.nav.bookAppointment}
               </Button>
+            </li>
+            <li>
+              <button className={styles.overlayLangToggle} onClick={toggle}>
+                <span className={lang === 'en' ? styles.langActive : styles.langInactive}>English</span>
+                <span className={styles.langDivider}> / </span>
+                <span className={lang === 'mr' ? styles.langActive : styles.langInactive}>मराठी</span>
+              </button>
             </li>
           </ul>
         </div>
