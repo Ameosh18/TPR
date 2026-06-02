@@ -9,6 +9,7 @@ import Services from './pages/Services/Services'
 import Process from './pages/Process/Process'
 import Blog from './pages/Blog/Blog'
 import Contact from './pages/Contact/Contact'
+import styles from './App.module.css'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -17,17 +18,17 @@ function ScrollToTop() {
 }
 
 function Layout() {
-  const { pathname } = useLocation()
-  const isHome = pathname === '/'
   return (
-    <>
-      <ScrollToTop />
-      <Nav forceSolid={!isHome} />
-      <main style={{ paddingTop: isHome ? 0 : 0 }}>
-        <Outlet />
-      </main>
-      <Footer />
-    </>
+    <div className={styles.pageWrap}>
+      <div className={styles.appCard}>
+        <ScrollToTop />
+        <Nav />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </div>
   )
 }
 

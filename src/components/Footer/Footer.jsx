@@ -21,7 +21,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.col}>
-          <img src="/logo.png" alt="The Physio Room" className={styles.logo} />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="The Physio Room" className={styles.logo} />
           <p className={styles.tagline}>Rehab Reimagined</p>
           <p className={styles.location}>Kothrud, Pune, Maharashtra</p>
           <p className={styles.muted}>Evidence-based physiotherapy tailored to you, not a template.</p>

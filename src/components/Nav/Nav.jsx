@@ -1,42 +1,43 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import useScrollHeader from '../../hooks/useScrollHeader'
 import Button from '../Button/Button'
 import styles from './Nav.module.css'
 
 const links = [
+  { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/conditions', label: 'Conditions' },
   { to: '/services', label: 'Services' },
+  { to: '/conditions', label: 'Conditions' },
   { to: '/process', label: 'Process' },
   { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
 ]
 
-export default function Nav({ forceSolid = false }) {
-  const scrolled = useScrollHeader(60)
+export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const solid = forceSolid || scrolled
 
   return (
-    <nav className={`${styles.nav} ${solid ? styles.solid : styles.transparent}`}>
+    <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
         <NavLink to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <img src="/logo.png" alt="The Physio Room" height="36" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="The Physio Room" height="36" />
         </NavLink>
 
         <ul className={styles.links}>
           {links.map(({ to, label }) => (
             <li key={to}>
-              <NavLink to={to} className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
+              <NavLink
+                to={to}
+                end={to === '/'}
+                className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+              >
                 {label}
               </NavLink>
             </li>
           ))}
         </ul>
 
-        <Button href="https://wa.link/bddr6y" variant={solid ? 'primary' : 'cream'} className={styles.cta}>
-          Book Now
+        <Button href="/contact" variant="cream" className={styles.cta}>
+          Contact Us
         </Button>
 
         <button
@@ -53,14 +54,19 @@ export default function Nav({ forceSolid = false }) {
           <ul>
             {links.map(({ to, label }) => (
               <li key={to}>
-                <NavLink to={to} className={styles.overlayLink} onClick={() => setMenuOpen(false)}>
+                <NavLink
+                  to={to}
+                  end={to === '/'}
+                  className={({ isActive }) => `${styles.overlayLink} ${isActive ? styles.overlayActive : ''}`}
+                  onClick={() => setMenuOpen(false)}
+                >
                   {label}
                 </NavLink>
               </li>
             ))}
             <li>
-              <Button href="https://wa.link/bddr6y" variant="cream" className={styles.overlayBtn}>
-                Book Now
+              <Button href="/contact" variant="cream" className={styles.overlayBtn} onClick={() => setMenuOpen(false)}>
+                Contact Us
               </Button>
             </li>
           </ul>
