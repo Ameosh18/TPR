@@ -18,6 +18,7 @@
   height: 40px;
   width: auto;
   object-fit: contain;
+  filter: brightness(0) invert(1) sepia(1) saturate(4) hue-rotate(48deg) brightness(0.92);
 }
 
 .links {
