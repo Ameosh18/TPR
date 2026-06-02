@@ -2,21 +2,27 @@ import { useState } from 'react'
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Tag from '../../components/Tag/Tag'
 import Button from '../../components/Button/Button'
-import { conditions, categories } from '../../data/conditions'
+import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Conditions.module.css'
 
 export default function Conditions() {
-  const [active, setActive] = useState('All')
-  const filtered = active === 'All' ? conditions : conditions.filter(c => c.category === active)
+  const { t } = useLanguage()
+  const cp = t.conditionsPage
+  const [activeIdx, setActiveIdx] = useState(0)
+
+  const activeLabel = cp.categories[activeIdx]
+  const filtered = activeIdx === 0
+    ? cp.conditions
+    : cp.conditions.filter(c => c.category === activeLabel)
 
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <FadeUp>
-            <span className={`label ${styles.tag}`}>What we treat</span>
-            <h1 className={`heading-display ${styles.headline}`}>Conditions we treat</h1>
-            <p className={styles.sub}>From acute injuries to chronic pain that's been dismissed for years — we work with the full spectrum.</p>
+            <span className={`label ${styles.tag}`}>{cp.tag}</span>
+            <h1 className={`heading-display ${styles.headline}`}>{cp.heading}</h1>
+            <p className={styles.sub}>{cp.sub}</p>
           </FadeUp>
         </div>
       </section>
@@ -25,8 +31,8 @@ export default function Conditions() {
         <div className="container">
           <FadeUp>
             <div className={styles.filters}>
-              {categories.map(cat => (
-                <Tag key={cat} label={cat} active={active === cat} onClick={() => setActive(cat)} />
+              {cp.categories.map((cat, i) => (
+                <Tag key={cat} label={cat} active={activeIdx === i} onClick={() => setActiveIdx(i)} />
               ))}
             </div>
           </FadeUp>
@@ -37,7 +43,7 @@ export default function Conditions() {
                   <span className={styles.catBadge}>{c.category}</span>
                   <h3 className={styles.cardHead}>{c.name}</h3>
                   <p className={styles.cardBody}>{c.description}</p>
-                  <Button href="/contact" variant="ghost" className={styles.cardCta}>Book for this →</Button>
+                  <Button href="/contact" variant="ghost" className={styles.cardCta}>{cp.bookCta}</Button>
                 </div>
               </FadeUp>
             ))}
