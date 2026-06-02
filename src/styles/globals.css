@@ -12,8 +12,8 @@
   --text-on-dark:   #F5F2EB;
   --gradient:       linear-gradient(165deg, #3D4A26 0%, #6B7C45 50%, #8FA05C 100%);
 
-  --font-heading: 'Fraunces', Georgia, serif;
-  --font-body:    'Outfit', system-ui, sans-serif;
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
 
   --bp-sm:  480px;
   --bp-md:  768px;
