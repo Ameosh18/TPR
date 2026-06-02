@@ -1,17 +1,20 @@
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Button from '../../components/Button/Button'
-import { services } from '../../data/services'
+import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Services.module.css'
 
 export default function Services() {
+  const { t } = useLanguage()
+  const s = t.servicesPage
+
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <FadeUp>
-            <span className={`label ${styles.tag}`}>What we offer</span>
-            <h1 className={`heading-display ${styles.headline}`}>Every treatment starts with listening.</h1>
-            <p className={styles.sub}>We don't have a standard package. We have a standard of care — and then we build your plan from there.</p>
+            <span className={`label ${styles.tag}`}>{s.heroTag}</span>
+            <h1 className={`heading-display ${styles.headline}`}>{s.heroHead}</h1>
+            <p className={styles.sub}>{s.heroSub}</p>
           </FadeUp>
         </div>
       </section>
@@ -19,14 +22,14 @@ export default function Services() {
       <section className={`section ${styles.main}`}>
         <div className="container">
           <div className={styles.grid}>
-            {services.map((s, i) => (
+            {s.services.map((svc, i) => (
               <FadeUp key={i}>
                 <div className={`card-hover ${styles.card}`}>
-                  <span className={styles.icon}>{s.icon}</span>
+                  <span className={styles.icon}>{svc.icon}</span>
                   <div className={styles.cardContent}>
-                    <h3 className={styles.cardHead}>{s.title}</h3>
-                    <p className={styles.cardBody}>{s.description}</p>
-                    <span className={styles.duration}>⏱ {s.duration}</span>
+                    <h3 className={styles.cardHead}>{svc.title}</h3>
+                    <p className={styles.cardBody}>{svc.description}</p>
+                    <span className={styles.duration}>⏱ {svc.duration}</span>
                   </div>
                 </div>
               </FadeUp>
@@ -34,8 +37,8 @@ export default function Services() {
           </div>
           <FadeUp>
             <div className={styles.note}>
-              <p>Pricing is available on request. We believe treatment decisions shouldn't be driven by a price list — they should be driven by what your body needs.</p>
-              <Button href="https://wa.link/bddr6y" variant="primary">Ask about pricing →</Button>
+              <p>{s.noteText}</p>
+              <Button href="https://wa.link/bddr6y" variant="primary">{s.noteBtn}</Button>
             </div>
           </FadeUp>
         </div>

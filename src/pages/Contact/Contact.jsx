@@ -1,29 +1,26 @@
 import { useState } from 'react'
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Button from '../../components/Button/Button'
+import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Contact.module.css'
-
-const reasons = ['Back / Neck Pain', 'Sports Injury', 'Post-surgical Rehab', 'Posture Correction', 'Shoulder / Hip / Knee', 'Not sure yet', 'Other']
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', reason: '', message: '' })
   const [sent, setSent] = useState(false)
+  const { t } = useLanguage()
+  const c = t.contactPage
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-
-  const submit = e => {
-    e.preventDefault()
-    setSent(true)
-  }
+  const submit = e => { e.preventDefault(); setSent(true) }
 
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <FadeUp>
-            <span className={`label ${styles.tag}`}>Book a consultation</span>
-            <h1 className={`heading-display ${styles.headline}`}>Let's get you moving again.</h1>
-            <p className={styles.sub}>Fill in the form below and Dr. Oshin will get back to you within 24 hours — usually sooner.</p>
+            <span className={`label ${styles.tag}`}>{c.heroTag}</span>
+            <h1 className={`heading-display ${styles.headline}`}>{c.heroHead}</h1>
+            <p className={styles.sub}>{c.heroSub}</p>
           </FadeUp>
         </div>
       </section>
@@ -34,61 +31,61 @@ export default function Contact() {
             <FadeUp className={styles.formWrap}>
               {sent ? (
                 <div className={styles.thanks}>
-                  <span className={styles.thanksIcon}>✓</span>
-                  <h2 className={styles.thanksHead}>Request received.</h2>
-                  <p className={styles.thanksSub}>Dr. Oshin will be in touch within 24 hours. No pressure — just a conversation.</p>
-                  <Button href="https://wa.link/bddr6y" variant="primary">Or reach out on WhatsApp</Button>
+                  <span className={styles.thanksIcon}>{c.thanksIcon}</span>
+                  <h2 className={styles.thanksHead}>{c.thanksHead}</h2>
+                  <p className={styles.thanksSub}>{c.thanksSub}</p>
+                  <Button href="https://wa.link/bddr6y" variant="primary">{c.thanksBtn}</Button>
                 </div>
               ) : (
                 <form onSubmit={submit} className={styles.form}>
-                  <h2 className={styles.formHead}>Send your request</h2>
+                  <h2 className={styles.formHead}>{c.formHead}</h2>
                   <div className={styles.row}>
                     <div className={styles.field}>
-                      <label htmlFor="name">Full name *</label>
-                      <input id="name" name="name" type="text" required value={form.name} onChange={handle} placeholder="Rahul Mehta" />
+                      <label htmlFor="name">{c.labelName}</label>
+                      <input id="name" name="name" type="text" required value={form.name} onChange={handle} placeholder={c.placeholderName} />
                     </div>
                     <div className={styles.field}>
-                      <label htmlFor="phone">Phone / WhatsApp *</label>
-                      <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handle} placeholder="+91 98765 43210" />
+                      <label htmlFor="phone">{c.labelPhone}</label>
+                      <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handle} placeholder={c.placeholderPhone} />
                     </div>
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="email">Email *</label>
-                    <input id="email" name="email" type="email" required value={form.email} onChange={handle} placeholder="rahul@example.com" />
+                    <label htmlFor="email">{c.labelEmail}</label>
+                    <input id="email" name="email" type="email" required value={form.email} onChange={handle} placeholder={c.placeholderEmail} />
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="reason">Reason for visit</label>
+                    <label htmlFor="reason">{c.labelReason}</label>
                     <select id="reason" name="reason" value={form.reason} onChange={handle}>
-                      <option value="">Select a reason</option>
-                      {reasons.map(r => <option key={r} value={r}>{r}</option>)}
+                      <option value="">{c.placeholderReason}</option>
+                      {c.reasons.map(r => <option key={r} value={r}>{r}</option>)}
                     </select>
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="message">Message (optional)</label>
-                    <textarea id="message" name="message" rows="4" value={form.message} onChange={handle} placeholder="Tell us a bit about what you're dealing with..." />
+                    <label htmlFor="message">{c.labelMessage}</label>
+                    <textarea id="message" name="message" rows="4" value={form.message} onChange={handle} placeholder={c.placeholderMessage} />
                   </div>
-                  <Button type="submit" variant="primary">Send my request</Button>
-                  <p className={styles.reassurance}>We'll get back to you within 24 hours. No pressure, no pushy sales.</p>
+                  <Button type="submit" variant="primary">{c.submitBtn}</Button>
+                  <p className={styles.reassurance}>{c.reassurance}</p>
                 </form>
               )}
             </FadeUp>
 
             <FadeUp className={styles.details}>
               <div className={styles.detailBlock}>
-                <h3 className={styles.detailHead}>The Physio Room</h3>
-                <p className={styles.detailItem}>📍 Kothrud, Pune, Maharashtra</p>
-                <p className={styles.detailItem}>📞 +91 98765 43210</p>
-                <p className={styles.detailItem}>✉️ hello@thephysioroom.in</p>
-                <p className={styles.detailItem}>🕐 Mon–Sat, 10am–7pm</p>
+                <h3 className={styles.detailHead}>{c.detailsHead}</h3>
+                <p className={styles.detailItem}>{c.address}</p>
+                <p className={styles.detailItem}>{c.phone}</p>
+                <p className={styles.detailItem}>{c.email}</p>
+                <p className={styles.detailItem}>{c.hours}</p>
               </div>
               <div className={styles.detailBlock}>
-                <h4 className={styles.subHead}>Or message us directly</h4>
-                <Button href="https://wa.link/bddr6y" variant="primary">Chat on WhatsApp</Button>
+                <h4 className={styles.subHead}>{c.whatsappHead}</h4>
+                <Button href="https://wa.link/bddr6y" variant="primary">{c.whatsappBtn}</Button>
               </div>
               <div className={styles.detailBlock}>
-                <h4 className={styles.subHead}>Follow along</h4>
+                <h4 className={styles.subHead}>{c.followHead}</h4>
                 <a href="https://www.instagram.com/tpr_rehabreimagined" target="_blank" rel="noopener noreferrer" className={styles.instagram}>
-                  @tpr_rehabreimagined on Instagram
+                  {c.instagram}
                 </a>
               </div>
             </FadeUp>
