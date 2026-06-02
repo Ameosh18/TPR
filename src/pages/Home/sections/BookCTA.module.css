@@ -1,0 +1,20 @@
+.section {
+  background: var(--gradient);
+  padding: 96px 0;
+}
+
+.inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.heading { color: var(--text-on-dark); }
+
+.sub { font-size: 18px; color: rgba(245, 242, 235, 0.8); max-width: 480px; }
+
+.actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; }
+
+.handle { font-size: 14px; color: rgba(245, 242, 235, 0.6); letter-spacing: 0.5px; }
