@@ -1,0 +1,54 @@
+.hero {
+  background: linear-gradient(155deg, #243814 0%, #1C2E10 25%, #4A7C28 65%, #C4DE9A 100%);
+  padding: 160px 0 80px;
+}
+
+.heroInner { max-width: 700px; }
+
+.tag { color: var(--brand-light); display: block; margin-bottom: 12px; }
+
+.headline { color: var(--text-on-dark); margin-bottom: 16px; }
+
+.sub { font-size: 17px; color: rgba(245,242,235,0.7); line-height: 1.7; }
+
+.main { background: var(--light-bg); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catBadge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+}
+
+.cardHead {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cardBody { font-size: 14px; color: var(--text-muted); line-height: 1.7; flex: 1; }
+
+.cardCta { margin-top: 4px; font-size: 13px; padding: 10px 20px; }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
