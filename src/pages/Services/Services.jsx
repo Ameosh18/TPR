@@ -1,6 +1,8 @@
+import { ClockIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Button from '../../components/Button/Button'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { iconMap } from '../../utils/iconMap'
 import styles from './Services.module.css'
 
 export default function Services() {
@@ -22,18 +24,24 @@ export default function Services() {
       <section className={`section ${styles.main}`}>
         <div className="container">
           <div className={styles.grid}>
-            {s.services.map((svc, i) => (
-              <FadeUp key={i}>
-                <div className={`card-hover ${styles.card}`}>
-                  <span className={styles.icon}>{svc.icon}</span>
-                  <div className={styles.cardContent}>
-                    <h3 className={styles.cardHead}>{svc.title}</h3>
-                    <p className={styles.cardBody}>{svc.description}</p>
-                    <span className={styles.duration}>⏱ {svc.duration}</span>
+            {s.services.map((svc, i) => {
+              const Icon = iconMap[svc.icon]
+              return (
+                <FadeUp key={i}>
+                  <div className={`card-hover ${styles.card}`}>
+                    {Icon && <Icon className={styles.icon} />}
+                    <div className={styles.cardContent}>
+                      <h3 className={styles.cardHead}>{svc.title}</h3>
+                      <p className={styles.cardBody}>{svc.description}</p>
+                      <span className={styles.duration}>
+                        <ClockIcon className={styles.clockIcon} />
+                        {svc.duration}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </FadeUp>
-            ))}
+                </FadeUp>
+              )
+            })}
           </div>
           <FadeUp>
             <div className={styles.note}>

@@ -18,7 +18,8 @@
   align-items: flex-start;
 }
 
-.icon { font-size: 32px; flex-shrink: 0; }
+.icon { width: 32px; height: 32px; flex-shrink: 0; color: var(--brand-primary); }
+.clockIcon { width: 14px; height: 14px; vertical-align: middle; margin-right: 4px; color: var(--text-muted); }
 
 .cardContent { display: flex; flex-direction: column; gap: 10px; }
 

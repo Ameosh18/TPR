@@ -64,15 +64,11 @@
 }
 
 .thanksIcon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--brand-primary);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 22px;
+  width: 52px;
+  height: 52px;
+  color: var(--brand-primary);
+  display: block;
+  margin: 0 auto 16px;
 }
 
 .thanksHead { font-family: var(--font-heading); font-size: 28px; font-weight: 600; color: var(--text-primary); }
@@ -93,7 +89,8 @@
 
 .subHead { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand-dark); }
 
-.detailItem { font-size: 15px; color: var(--text-muted); }
+.detailItem { font-size: 15px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+.detailIcon { width: 16px; height: 16px; flex-shrink: 0; color: var(--brand-primary); }
 
 .instagram { font-size: 15px; color: var(--brand-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 

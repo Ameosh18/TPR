@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Button from '../../components/Button/Button'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { iconMap } from '../../utils/iconMap'
 import styles from './Contact.module.css'
 
 export default function Contact() {
@@ -12,6 +14,8 @@ export default function Contact() {
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   const submit = e => { e.preventDefault(); setSent(true) }
+
+  const details = [c.address, c.phone, c.email, c.hours]
 
   return (
     <>
@@ -31,7 +35,7 @@ export default function Contact() {
             <FadeUp className={styles.formWrap}>
               {sent ? (
                 <div className={styles.thanks}>
-                  <span className={styles.thanksIcon}>{c.thanksIcon}</span>
+                  <CheckCircleIcon className={styles.thanksIcon} />
                   <h2 className={styles.thanksHead}>{c.thanksHead}</h2>
                   <p className={styles.thanksSub}>{c.thanksSub}</p>
                   <Button href="https://wa.link/bddr6y" variant="primary">{c.thanksBtn}</Button>
@@ -73,10 +77,15 @@ export default function Contact() {
             <FadeUp className={styles.details}>
               <div className={styles.detailBlock}>
                 <h3 className={styles.detailHead}>{c.detailsHead}</h3>
-                <p className={styles.detailItem}>{c.address}</p>
-                <p className={styles.detailItem}>{c.phone}</p>
-                <p className={styles.detailItem}>{c.email}</p>
-                <p className={styles.detailItem}>{c.hours}</p>
+                {details.map((d, i) => {
+                  const Icon = iconMap[d.icon]
+                  return (
+                    <p key={i} className={styles.detailItem}>
+                      {Icon && <Icon className={styles.detailIcon} />}
+                      {d.text}
+                    </p>
+                  )
+                })}
               </div>
               <div className={styles.detailBlock}>
                 <h4 className={styles.subHead}>{c.whatsappHead}</h4>

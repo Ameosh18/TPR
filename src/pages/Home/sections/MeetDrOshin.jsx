@@ -1,6 +1,8 @@
+import { MagnifyingGlassIcon, EyeIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
 import { useLanguage } from '../../../contexts/LanguageContext'
+import { iconMap } from '../../../utils/iconMap'
 import styles from './MeetDrOshin.module.css'
 
 export default function MeetDrOshin() {
@@ -27,14 +29,14 @@ export default function MeetDrOshin() {
 
           <div className={styles.mvRow}>
             <div className={styles.mvCard}>
-              <span className={styles.mvIcon}>🎯</span>
+              <MagnifyingGlassIcon className={styles.mvIcon} />
               <div>
                 <h4 className={styles.mvTitle}>{a.missionTitle}</h4>
                 <p className={styles.mvText}>{a.missionText}</p>
               </div>
             </div>
             <div className={styles.mvCard}>
-              <span className={styles.mvIcon}>👁️</span>
+              <EyeIcon className={styles.mvIcon} />
               <div>
                 <h4 className={styles.mvTitle}>{a.visionTitle}</h4>
                 <p className={styles.mvText}>{a.visionText}</p>
@@ -48,13 +50,16 @@ export default function MeetDrOshin() {
 
       <div className={`container ${styles.bottomRow}`}>
         <div className={styles.featuresGrid}>
-          {a.features.map((f, i) => (
-            <div key={i} className={styles.featureItem}>
-              <span className={styles.featureIcon}>{f.icon}</span>
-              <h4 className={styles.featureTitle}>{f.title}</h4>
-              <p className={styles.featureBody}>{f.body}</p>
-            </div>
-          ))}
+          {a.features.map((f, i) => {
+            const Icon = iconMap[f.icon]
+            return (
+              <div key={i} className={styles.featureItem}>
+                {Icon && <Icon className={styles.featureIcon} />}
+                <h4 className={styles.featureTitle}>{f.title}</h4>
+                <p className={styles.featureBody}>{f.body}</p>
+              </div>
+            )
+          })}
         </div>
         <div className={styles.photoSecondary}>
           <div className={styles.photoPlaceholder2}>

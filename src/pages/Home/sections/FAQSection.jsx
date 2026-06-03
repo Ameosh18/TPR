@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import styles from './FAQSection.module.css'
 
@@ -27,7 +28,7 @@ export default function FAQSection() {
                 aria-expanded={open === i}
               >
                 <span>{item.q}</span>
-                <span className={styles.icon}>{open === i ? '−' : '+'}</span>
+                {open === i ? <MinusIcon className={styles.icon} /> : <PlusIcon className={styles.icon} />}
               </button>
               {open === i && <p className={styles.answer}>{item.a}</p>}
             </div>

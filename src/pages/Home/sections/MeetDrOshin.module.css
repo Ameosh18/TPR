@@ -84,9 +84,11 @@
 }
 
 .mvIcon {
-  font-size: 20px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--brand-primary);
 }
 
 .mvTitle {
@@ -125,7 +127,7 @@
   gap: 8px;
 }
 
-.featureIcon { font-size: 28px; }
+.featureIcon { width: 28px; height: 28px; color: var(--brand-primary); }
 
 .featureTitle {
   font-size: 15px;

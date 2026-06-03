@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../components/FadeUp/FadeUp'
 import Button from '../../components/Button/Button'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { iconMap } from '../../utils/iconMap'
 import styles from './Process.module.css'
 
 export default function Process() {
@@ -29,12 +31,15 @@ export default function Process() {
           </FadeUp>
           <FadeUp>
             <div className={styles.beforeGrid}>
-              {p.beforeItems.map((item, i) => (
-                <div key={i} className={styles.beforeItem}>
-                  <span>{item.icon}</span>
-                  <p>{item.text}</p>
-                </div>
-              ))}
+              {p.beforeItems.map((item, i) => {
+                const Icon = iconMap[item.icon]
+                return (
+                  <div key={i} className={styles.beforeItem}>
+                    {Icon && <Icon className={styles.beforeIcon} />}
+                    <p>{item.text}</p>
+                  </div>
+                )
+              })}
             </div>
           </FadeUp>
         </div>
@@ -73,7 +78,7 @@ export default function Process() {
                 <div className={`${styles.faqItem} ${openFaq === i ? styles.open : ''}`}>
                   <button className={styles.faqQ} onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                     <span>{item.q}</span>
-                    <span className={styles.chevron}>{openFaq === i ? '−' : '+'}</span>
+                    {openFaq === i ? <MinusIcon className={styles.chevron} /> : <PlusIcon className={styles.chevron} />}
                   </button>
                   <div className={styles.faqA}><p>{item.a}</p></div>
                 </div>
