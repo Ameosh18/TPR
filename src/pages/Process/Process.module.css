@@ -22,7 +22,7 @@
   line-height: 1.6;
 }
 
-.beforeIcon { width: 24px; height: 24px; flex-shrink: 0; color: var(--brand-primary); }
+.beforeIcon { width: 24px; height: 24px; flex-shrink: 0; color: var(--brand-primary); stroke-width: 2; }
 
 .stepsSection { background: #fff; }
 .tag2 { color: var(--brand-dark); display: block; margin-bottom: 12px; }
@@ -85,7 +85,7 @@
 }
 .faqQ:hover { color: var(--brand-dark); }
 
-.chevron { width: 20px; height: 20px; color: var(--brand-primary); flex-shrink: 0; }
+.chevron { width: 20px; height: 20px; color: var(--brand-primary); flex-shrink: 0; stroke-width: 2; }
 
 .faqA {
   max-height: 0;

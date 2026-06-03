@@ -89,6 +89,7 @@
   flex-shrink: 0;
   margin-top: 2px;
   color: var(--brand-primary);
+  stroke-width: 2;
 }
 
 .mvTitle {
@@ -127,7 +128,7 @@
   gap: 8px;
 }
 
-.featureIcon { width: 28px; height: 28px; color: var(--brand-primary); }
+.featureIcon { width: 28px; height: 28px; color: var(--brand-primary); stroke-width: 2; }
 
 .featureTitle {
   font-size: 15px;
