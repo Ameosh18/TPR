@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Footer.module.css'
@@ -14,7 +13,6 @@ const quickLinks = [
 ]
 
 export default function Footer() {
-  const [email, setEmail] = useState('')
   const { t } = useLanguage()
   const f = t.footer
 
@@ -66,22 +64,13 @@ export default function Footer() {
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colHead}>{f.stayConnected}</h4>
-          <p className={styles.brandText} style={{ marginBottom: '12px' }}>{f.newsletterText}</p>
-          <form className={styles.emailForm} onSubmit={e => { e.preventDefault(); setEmail('') }}>
-            <label htmlFor="footer-email" className={styles.srOnly}>{f.stayConnected}</label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder={f.emailPlaceholder}
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              className={styles.emailInput}
-              autoComplete="email"
-              required
-            />
-            <button type="submit" className={styles.emailBtn}>{f.subscribeBtn}</button>
-          </form>
+          <h4 className={styles.colHead}>Contact</h4>
+          <ul className={styles.linkList}>
+            <li><span className={styles.footText}>Kothrud, Pune, Maharashtra</span></li>
+            <li><a href="https://wa.link/bddr6y" className={styles.footLink}>WhatsApp Us</a></li>
+            <li><a href="mailto:hello@thephysioroom.in" className={styles.footLink}>hello@thephysioroom.in</a></li>
+            <li><span className={styles.footText}>Mon–Sat, 10am–7pm</span></li>
+          </ul>
         </div>
 
       </div>

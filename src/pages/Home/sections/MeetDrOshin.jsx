@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon, EyeIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
+import { ArchMask } from '../../../components/ArchMask/ArchMask'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import { iconMap } from '../../../utils/iconMap'
 import styles from './MeetDrOshin.module.css'
@@ -14,10 +15,7 @@ export default function MeetDrOshin() {
       <div className={`container ${styles.grid}`}>
         <FadeUp className={styles.photoCol}>
           <div className={styles.photoMain}>
-            <div className={styles.photoPlaceholder}>
-              <span>{a.photoLabel1}</span>
-              <span className={styles.photoNote}>{a.photoNote1}</span>
-            </div>
+            <ArchMask size="lg" bordered alt={a.photoLabel1} className={styles.archPhoto} />
           </div>
         </FadeUp>
 
@@ -62,10 +60,7 @@ export default function MeetDrOshin() {
           })}
         </div>
         <div className={styles.photoSecondary}>
-          <div className={styles.photoPlaceholder2}>
-            <span>{a.photoLabel2}</span>
-            <span className={styles.photoNote}>{a.photoNote2}</span>
-          </div>
+          <ArchMask size="md" alt={a.photoLabel2} />
         </div>
       </div>
     </section>
