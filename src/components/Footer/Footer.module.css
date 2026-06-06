@@ -1,5 +1,5 @@
 .footer {
-  background: var(--section-dark);
+  background: #2B473C;
   color: var(--text-on-dark);
   border-top: 3px solid var(--brand-primary);
 }

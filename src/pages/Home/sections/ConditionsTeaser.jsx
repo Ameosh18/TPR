@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
+import { StarAccent } from '../../../components/StarAccent/StarAccent'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import styles from './ConditionsTeaser.module.css'
 
@@ -10,7 +11,8 @@ export default function ConditionsTeaser() {
 
   return (
     <section className={`section ${styles.section}`}>
-      <div className="container">
+      <div className="container" style={{ position: 'relative' }}>
+        <StarAccent size={48} opacity={0.25} rotation={15} style={{ position: 'absolute', top: -20, right: 0, pointerEvents: 'none' }} />
         <FadeUp>
           <span className={`label ${styles.tag}`}>{c.tag}</span>
           <h2 className={`heading-section ${styles.heading}`}>{c.heading}</h2>
@@ -24,7 +26,7 @@ export default function ConditionsTeaser() {
         </FadeUp>
         <FadeUp>
           <div className={styles.cta}>
-            <Button href="/conditions" variant="cream">{c.seeAll}</Button>
+            <a href="/conditions" className={styles.seeAll}>{c.seeAll}</a>
           </div>
         </FadeUp>
       </div>

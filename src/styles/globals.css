@@ -1,44 +1,55 @@
 /* ─── Brand Tokens ─────────────────────────────────────────────────────────── */
 :root {
+  /* Brand */
   --brand-primary:  #B1D082;
-  --brand-light:    #C8E0A0;
   --brand-dark:     #2B473C;
+  --brand-darker:   #1E3329;
 
+  /* Backgrounds */
   --page-bg:        #FFFFFF;
-  --section-alt:    #F0F3EE;
-  --section-dark:   #1A2420;
-  --dark-surface:   #22302A;
-  --card-bg:        #FFFFFF;
+  --section-alt:    #EFF5E6;
+  --section-dark:   #2B473C;
+  --dark-surface:   #1E3329;
 
+  /* Text */
   --text-primary:   #111111;
-  --text-body:      #4B5563;
+  --text-body:      #4A5568;
   --text-muted:     #6B7280;
-  --text-on-dark:   #F5F5F5;
+  --text-on-dark:   #FFFFFF;
 
+  /* Borders */
   --border:         #E5E7EB;
-  --border-green:   #D1E4B8;
-  --light-border:   #E5E7EB;
+  --border-brand:   #D1E8B0;
+
+  /* Cards */
+  --card-radius:    10px;
+  --card-shadow:    0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.05);
+  --card-shadow-hover: 0 8px 32px rgba(0,0,0,0.14);
+
+  /* Shape tokens */
+  --pill-radius:    999px;
+  --btn-radius:     8px;
+  --circle-radius:  50%;
+
+  /* Legacy aliases */
+  --brand-light:    #C8E0A0;
   --light-bg:       #FFFFFF;
-  --dark-bg:        #1A2420;
-  --section-light:  #F0F3EE;
+  --light-border:   #E5E7EB;
+  --dark-bg:        #2B473C;
+  --section-light:  #EFF5E6;
   --section-white:  #FFFFFF;
+  --arch-radius:    999px;
+  --oval-radius:    50%;
+  --gradient:       linear-gradient(135deg, #2B473C 0%, #3D6B52 100%);
+  --star-color:     #B1D082;
+  --arc-color:      #B1D082;
 
-  --card-radius:       12px;
-  --card-shadow:       0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
-  --card-shadow-hover: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-
-  --oval-radius: 50%;
-  --btn-radius:  999px;
-  --pill-radius: 999px;
-  --arch-radius: 50% 50% 0 0 / 60% 60% 0 0;
-
-  --star-color:  #B1D082;
-  --gradient: linear-gradient(140deg, #1A2420 0%, #2B473C 60%, #4A7A5A 100%);
-
+  /* Typography */
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body:    'Outfit', system-ui, sans-serif;
   --font-devanagari: 'Noto Sans Devanagari', system-ui, sans-serif;
 
+  /* Breakpoints */
   --bp-sm: 480px; --bp-md: 768px; --bp-lg: 1024px; --bp-xl: 1280px;
 }
 
@@ -186,6 +197,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 12px;
 }
 
 /* ─── Card Hover ────────────────────────────────────────────────────────────── */

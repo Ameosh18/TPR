@@ -23,16 +23,22 @@ export default function Services() {
 
       <section className={`section ${styles.main}`}>
         <div className="container">
+          <div className={styles.headingRow}>
+            <h2 className="heading-section" style={{ color: 'var(--text-primary)' }}>Our Services</h2>
+            <Button variant="circle" href="/contact" aria-label="Book an appointment">→</Button>
+          </div>
           <div className={styles.grid}>
             {s.services.map((svc, i) => {
               const Icon = iconMap[svc.icon]
               return (
                 <FadeUp key={i}>
-                  <div className={`card-hover ${styles.card}`}>
-                    {Icon && <Icon className={styles.icon} />}
-                    <div className={styles.cardContent}>
+                  <div className={styles.card}>
+                    <div className={styles.cardImg}>
+                      {Icon && <Icon className={styles.icon} />}
+                    </div>
+                    <div className={styles.cardBody}>
                       <h3 className={styles.cardHead}>{svc.title}</h3>
-                      <p className={styles.cardBody}>{svc.description}</p>
+                      <p className={styles.cardDesc}>{svc.description}</p>
                       <span className={styles.duration}>
                         <ClockIcon className={styles.clockIcon} />
                         {svc.duration}
@@ -46,7 +52,7 @@ export default function Services() {
           <FadeUp>
             <div className={styles.note}>
               <p>{s.noteText}</p>
-              <Button href="https://wa.link/bddr6y" variant="primary">{s.noteBtn}</Button>
+              <Button href="https://wa.link/bddr6y" variant="ghostLight">{s.noteBtn}</Button>
             </div>
           </FadeUp>
         </div>

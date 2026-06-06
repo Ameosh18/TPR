@@ -1,4 +1,4 @@
-import { OvalMask } from '../../../components/OvalMask/OvalMask'
+import { PillMask } from '../../../components/PillMask/PillMask'
 import { StarAccent } from '../../../components/StarAccent/StarAccent'
 import Button from '../../../components/Button/Button'
 import { useLanguage } from '../../../contexts/LanguageContext'
@@ -10,11 +10,9 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      <StarAccent size={48} opacity={0.4} className={styles.starTopLeft} />
-      <StarAccent size={32} opacity={0.25} rotation={22} className={styles.starTopRight} />
       <div className={`container ${styles.inner}`}>
+        {/* LEFT */}
         <div className={styles.left}>
-          <span className={styles.tag}>{h.locationTag}</span>
           <h1 className={styles.headline}>
             {h.line1}<br />{h.line2}<br /><em>{h.line3}</em>
           </h1>
@@ -36,14 +34,14 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
+
+        {/* RIGHT — two overlapping tall pill images + star accent */}
         <div className={styles.right}>
-          <div className={styles.imageCollage}>
-            <OvalMask size="lg" bordered className={styles.imgPrimary} />
-            <OvalMask size="circle" className={styles.imgCircle} />
-          </div>
-          <div className={styles.statCard}>
-            <span className={styles.statNum}>{h.stat1num}</span>
-            <span className={styles.statLabel}>{h.stat1label}</span>
+          <StarAccent size={44} opacity={0.6} className={styles.starTR} />
+          <StarAccent size={28} opacity={0.35} rotation={30} className={styles.starBL} />
+          <div className={styles.pillGroup}>
+            <PillMask size="lg" className={styles.pill1} />
+            <PillMask size="md" className={styles.pill2} />
           </div>
         </div>
       </div>

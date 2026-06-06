@@ -4,10 +4,13 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--page-bg);
+  background: #ffffff;
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
 }
+
+/* Legacy transparent/solid classes — always solid now */
+.transparent { background: #ffffff; }
+.solid { background: #ffffff; }
 
 .inner {
   display: flex;

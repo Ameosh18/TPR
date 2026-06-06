@@ -1,5 +1,4 @@
 import FadeUp from '../../components/FadeUp/FadeUp'
-import Tag from '../../components/Tag/Tag'
 import { useLanguage } from '../../contexts/LanguageContext'
 import styles from './Blog.module.css'
 
@@ -25,9 +24,9 @@ export default function Blog() {
         <div className="container">
           {featured && (
             <FadeUp>
-              <article className={`card-hover ${styles.featuredCard}`}>
+              <article className={styles.featuredCard}>
                 <div className={styles.featuredMeta}>
-                  <Tag label={featured.category} />
+                  <span className={styles.categoryPill}>{featured.category}</span>
                   <span className={styles.meta}>{featured.readTime} · {featured.date}</span>
                 </div>
                 <h2 className={styles.featuredTitle}>{featured.title}</h2>
@@ -40,16 +39,16 @@ export default function Blog() {
           <div className={styles.grid}>
             {rest.map((post, i) => (
               <FadeUp key={i}>
-                <article className={`card-hover ${styles.card}`}>
-                  <div className={styles.cardMeta}>
-                    <Tag label={post.category} />
-                    <span className={styles.meta}>{post.readTime}</span>
-                  </div>
-                  <h3 className={styles.cardTitle}>{post.title}</h3>
-                  <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                  <div className={styles.cardFooter}>
-                    <span className={styles.date}>{post.date}</span>
-                    <a href="/blog" className={styles.readMore}>{b.readMoreShort}</a>
+                <article className={styles.card}>
+                  <div className={styles.cardPhoto} />
+                  <div className={styles.cardContent}>
+                    <span className={styles.categoryPill}>{post.category}</span>
+                    <h3 className={styles.cardTitle}>{post.title}</h3>
+                    <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                    <div className={styles.cardFooter}>
+                      <span className={styles.date}>{post.date}</span>
+                      <a href="/blog" className={styles.readMore}>{b.readMoreShort}</a>
+                    </div>
                   </div>
                 </article>
               </FadeUp>
