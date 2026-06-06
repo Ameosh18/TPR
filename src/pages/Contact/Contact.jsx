@@ -46,16 +46,16 @@ export default function Contact() {
                   <div className={styles.row}>
                     <div className={styles.field}>
                       <label htmlFor="name">{c.labelName}</label>
-                      <input id="name" name="name" type="text" required value={form.name} onChange={handle} placeholder={c.placeholderName} />
+                      <input id="name" name="name" type="text" required autoComplete="name" value={form.name} onChange={handle} placeholder={c.placeholderName} />
                     </div>
                     <div className={styles.field}>
                       <label htmlFor="phone">{c.labelPhone}</label>
-                      <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handle} placeholder={c.placeholderPhone} />
+                      <input id="phone" name="phone" type="tel" required autoComplete="tel" value={form.phone} onChange={handle} placeholder={c.placeholderPhone} />
                     </div>
                   </div>
                   <div className={styles.field}>
                     <label htmlFor="email">{c.labelEmail}</label>
-                    <input id="email" name="email" type="email" required value={form.email} onChange={handle} placeholder={c.placeholderEmail} />
+                    <input id="email" name="email" type="email" required autoComplete="email" value={form.email} onChange={handle} placeholder={c.placeholderEmail} />
                   </div>
                   <div className={styles.field}>
                     <label htmlFor="reason">{c.labelReason}</label>

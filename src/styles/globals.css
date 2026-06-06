@@ -8,7 +8,7 @@
   --dark-bg:        #1A2420;
   --dark-surface:   #22302A;
   --text-primary:   #2B473C;
-  --text-muted:     #6B7B6E;
+  --text-muted:     #5A6B5E;
   --text-on-dark:   #F4F2EC;
   --gradient:       linear-gradient(165deg, #2B473C 0%, #4A7A5A 50%, #B1D082 100%);
 
@@ -30,6 +30,27 @@
 }
 
 html { scroll-behavior: smooth; }
+
+/* ─── Focus Styles ──────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--brand-dark);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 body {
   font-family: var(--font-body);

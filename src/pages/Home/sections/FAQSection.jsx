@@ -23,6 +23,7 @@ export default function FAQSection() {
           {f.items.map((item, i) => (
             <div key={i} className={`${styles.item} ${open === i ? styles.itemOpen : ''}`}>
               <button
+                type="button"
                 className={styles.question}
                 onClick={() => setOpen(open === i ? null : i)}
                 aria-expanded={open === i}

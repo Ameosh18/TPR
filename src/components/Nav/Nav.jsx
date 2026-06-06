@@ -62,6 +62,8 @@ export default function Nav({ forceSolid = false }) {
           className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
           onClick={() => setMenuOpen(v => !v)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          type="button"
         >
           <span /><span /><span />
         </button>

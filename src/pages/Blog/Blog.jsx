@@ -25,22 +25,22 @@ export default function Blog() {
         <div className="container">
           {featured && (
             <FadeUp>
-              <div className={`card-hover ${styles.featuredCard}`}>
+              <article className={`card-hover ${styles.featuredCard}`}>
                 <div className={styles.featuredMeta}>
                   <Tag label={featured.category} />
                   <span className={styles.meta}>{featured.readTime} · {featured.date}</span>
                 </div>
                 <h2 className={styles.featuredTitle}>{featured.title}</h2>
                 <p className={styles.featuredExcerpt}>{featured.excerpt}</p>
-                <span className={styles.readMore}>{b.readMore}</span>
-              </div>
+                <a href="/blog" className={styles.readMore}>{b.readMore}</a>
+              </article>
             </FadeUp>
           )}
 
           <div className={styles.grid}>
             {rest.map((post, i) => (
               <FadeUp key={i}>
-                <div className={`card-hover ${styles.card}`}>
+                <article className={`card-hover ${styles.card}`}>
                   <div className={styles.cardMeta}>
                     <Tag label={post.category} />
                     <span className={styles.meta}>{post.readTime}</span>
@@ -49,9 +49,9 @@ export default function Blog() {
                   <p className={styles.cardExcerpt}>{post.excerpt}</p>
                   <div className={styles.cardFooter}>
                     <span className={styles.date}>{post.date}</span>
-                    <span className={styles.readMore}>{b.readMoreShort}</span>
+                    <a href="/blog" className={styles.readMore}>{b.readMoreShort}</a>
                   </div>
-                </div>
+                </article>
               </FadeUp>
             ))}
           </div>

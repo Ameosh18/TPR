@@ -76,7 +76,7 @@ export default function Process() {
             {f.items.map((item, i) => (
               <FadeUp key={i}>
                 <div className={`${styles.faqItem} ${openFaq === i ? styles.open : ''}`}>
-                  <button className={styles.faqQ} onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                  <button type="button" className={styles.faqQ} onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}>
                     <span>{item.q}</span>
                     {openFaq === i ? <MinusIcon className={styles.chevron} /> : <PlusIcon className={styles.chevron} />}
                   </button>
