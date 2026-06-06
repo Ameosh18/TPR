@@ -1,5 +1,6 @@
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
+import { StarAccent } from '../../../components/StarAccent/StarAccent'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import styles from './BookCTA.module.css'
 
@@ -9,6 +10,8 @@ export default function BookCTA() {
 
   return (
     <section className={styles.section}>
+      <StarAccent size={48} opacity={0.2} className={styles.starLeft} />
+      <StarAccent size={32} opacity={0.15} rotation={30} className={styles.starRight} />
       <div className="container">
         <FadeUp className={styles.inner}>
           <h2 className={`heading-section ${styles.heading}`}>{c.heading}</h2>

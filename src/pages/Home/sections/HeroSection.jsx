@@ -1,5 +1,5 @@
-import { ArchMask } from '../../../components/ArchMask/ArchMask'
-import { ArcAccent, ArcAccentDouble } from '../../../components/ArcAccent/ArcAccent'
+import { OvalMask } from '../../../components/OvalMask/OvalMask'
+import { StarAccent } from '../../../components/StarAccent/StarAccent'
 import Button from '../../../components/Button/Button'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import styles from './HeroSection.module.css'
@@ -10,11 +10,11 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      <ArcAccent size={120} rotation={-30} opacity={0.35} className={styles.arcTopLeft} />
+      <StarAccent size={48} opacity={0.4} className={styles.starTopLeft} />
+      <StarAccent size={32} opacity={0.25} rotation={22} className={styles.starTopRight} />
       <div className={`container ${styles.inner}`}>
-        {/* LEFT */}
         <div className={styles.left}>
-          <span className={styles.tag}>· {h.locationTag}</span>
+          <span className={styles.tag}>{h.locationTag}</span>
           <h1 className={styles.headline}>
             {h.line1}<br />{h.line2}<br /><em>{h.line3}</em>
           </h1>
@@ -36,18 +36,14 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-
-        {/* RIGHT */}
         <div className={styles.right}>
-          <ArcAccentDouble size={100} rotation={180} opacity={0.4} className={styles.arcRight} />
           <div className={styles.imageCollage}>
-            <ArchMask size="lg" bordered className={styles.imgPrimary} />
-            <ArchMask size="md" className={styles.imgSecondary} />
-            <ArchMask size="sm" className={styles.imgTertiary} />
+            <OvalMask size="lg" bordered className={styles.imgPrimary} />
+            <OvalMask size="circle" className={styles.imgCircle} />
           </div>
           <div className={styles.statCard}>
-            <span className={styles.statNum}>{h.stat2num}</span>
-            <span className={styles.statLabel}>{h.stat2label}</span>
+            <span className={styles.statNum}>{h.stat1num}</span>
+            <span className={styles.statLabel}>{h.stat1label}</span>
           </div>
         </div>
       </div>

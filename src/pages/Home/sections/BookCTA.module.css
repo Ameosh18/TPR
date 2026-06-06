@@ -1,6 +1,22 @@
 .section {
-  background: var(--gradient);
+  background: var(--section-dark);
   padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.starLeft {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  pointer-events: none;
+}
+
+.starRight {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  pointer-events: none;
 }
 
 .inner {

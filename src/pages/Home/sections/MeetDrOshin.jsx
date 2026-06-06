@@ -1,7 +1,8 @@
 import { MagnifyingGlassIcon, EyeIcon } from '@heroicons/react/24/outline'
 import FadeUp from '../../../components/FadeUp/FadeUp'
 import Button from '../../../components/Button/Button'
-import { ArchMask } from '../../../components/ArchMask/ArchMask'
+import { OvalMask } from '../../../components/OvalMask/OvalMask'
+import { StarAccent } from '../../../components/StarAccent/StarAccent'
 import { useLanguage } from '../../../contexts/LanguageContext'
 import { iconMap } from '../../../utils/iconMap'
 import styles from './MeetDrOshin.module.css'
@@ -15,7 +16,16 @@ export default function MeetDrOshin() {
       <div className={`container ${styles.grid}`}>
         <FadeUp className={styles.photoCol}>
           <div className={styles.photoMain}>
-            <ArchMask size="lg" bordered alt={a.photoLabel1} className={styles.archPhoto} />
+            <OvalMask size="lg" bordered alt={a.photoLabel1} className={styles.ovalPhoto} />
+            <div className={styles.statOverlay1}>
+              <span className={styles.statNum}>9+</span>
+              <span className={styles.statLabel}>{a.stat1label || 'Years Experience'}</span>
+            </div>
+            <div className={styles.statOverlay2}>
+              <span className={styles.statNum}>1,000+</span>
+              <span className={styles.statLabel}>{a.stat2label || 'Patients Helped'}</span>
+            </div>
+            <StarAccent size={32} opacity={0.3} rotation={15} className={styles.starDecor} />
           </div>
         </FadeUp>
 
@@ -60,7 +70,7 @@ export default function MeetDrOshin() {
           })}
         </div>
         <div className={styles.photoSecondary}>
-          <ArchMask size="md" alt={a.photoLabel2} />
+          <OvalMask size="md" alt={a.photoLabel2} />
         </div>
       </div>
     </section>

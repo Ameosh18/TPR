@@ -1,5 +1,5 @@
 .section {
-  background: #ffffff;
+  background: var(--page-bg);
   padding: 80px 0 0;
 }
 
@@ -16,10 +16,65 @@
 .photoCol { width: 100%; }
 
 .photoMain {
-  border-radius: 20px;
-  overflow: hidden;
-  aspect-ratio: 4/5;
-  background: var(--light-border);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0 60px;
+}
+
+.ovalPhoto {
+  position: relative;
+  z-index: 1;
+}
+
+.statOverlay1 {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  background: var(--page-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 3px solid var(--brand-primary);
+  z-index: 2;
+}
+
+.statOverlay2 {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: var(--page-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 3px solid var(--brand-primary);
+  z-index: 2;
+}
+
+.statNum {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.starDecor {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
 }
 
 .photoPlaceholder {
@@ -78,7 +133,7 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  background: var(--light-bg);
+  background: var(--section-alt);
   border-radius: 12px;
   padding: 16px;
 }

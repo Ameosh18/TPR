@@ -1,7 +1,7 @@
 .section {
-  background: #ffffff;
+  background: var(--section-alt);
   padding: 96px 0;
-  border-top: 1px solid #f0ede6;
+  border-top: 1px solid var(--border);
 }
 
 .grid {
@@ -51,11 +51,11 @@
 .right {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #e8e4dc;
+  border-top: 1px solid var(--border);
 }
 
 .item {
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid var(--border);
 }
 
 .question {

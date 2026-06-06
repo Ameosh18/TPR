@@ -1,8 +1,8 @@
-.hero { background: var(--section-light); padding: 160px 0 80px; border-bottom: 1px solid var(--light-border); }
+.hero { background: var(--page-bg); padding: 80px 0 72px; border-bottom: 1px solid var(--border); }
 .heroInner { max-width: 700px; }
-.tag { color: var(--brand-primary); display: block; margin-bottom: 12px; }
+.tag { color: var(--text-muted); display: block; margin-bottom: 12px; }
 .headline { color: var(--text-primary); margin-bottom: 16px; }
-.sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
+.sub { font-size: 17px; color: var(--text-body); line-height: 1.7; }
 
 .before { background: var(--light-bg); }
 .sectionHead { color: var(--text-primary); margin-bottom: 40px; }
@@ -41,12 +41,11 @@
 .stepNum {
   font-family: var(--font-heading);
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--brand-primary);
-  opacity: 0.4;
   line-height: 1;
   flex-shrink: 0;
-  width: 64px;
+  width: 72px;
 }
 
 .stepHead {

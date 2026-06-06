@@ -1,8 +1,8 @@
-.hero { background: var(--section-light); padding: 160px 0 80px; border-bottom: 1px solid var(--light-border); }
+.hero { background: var(--page-bg); padding: 80px 0 72px; border-bottom: 1px solid var(--border); }
 .heroInner { max-width: 680px; }
-.tag { color: var(--brand-primary); display: block; margin-bottom: 12px; }
+.tag { color: var(--text-muted); display: block; margin-bottom: 12px; }
 .headline { color: var(--text-primary); margin-bottom: 16px; }
-.sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
+.sub { font-size: 17px; color: var(--text-body); line-height: 1.7; }
 
 .main { background: var(--light-bg); }
 

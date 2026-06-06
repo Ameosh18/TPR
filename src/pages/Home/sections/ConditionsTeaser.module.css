@@ -1,4 +1,4 @@
-.section { background: var(--dark-bg); }
+.section { background: var(--section-dark); }
 
 .tag { color: var(--brand-light); display: block; margin-bottom: 12px; }
 
@@ -11,16 +11,16 @@
   font-weight: 500;
   padding: 8px 20px;
   border-radius: 24px;
-  border: 1.5px solid rgba(143, 160, 92, 0.4);
-  color: rgba(245, 242, 235, 0.8);
-  background: rgba(107, 124, 69, 0.1);
+  border: 1.5px solid rgba(177, 208, 130, 0.35);
+  color: rgba(245, 245, 245, 0.8);
+  background: rgba(177, 208, 130, 0.08);
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .pill:hover {
-  background: var(--brand-dark);
-  color: var(--light-bg);
-  border-color: var(--brand-dark);
+  background: var(--brand-primary);
+  color: var(--brand-dark);
+  border-color: var(--brand-primary);
 }
 
 .cta { margin-top: 8px; }

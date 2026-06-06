@@ -1,46 +1,45 @@
 /* ─── Brand Tokens ─────────────────────────────────────────────────────────── */
 :root {
-  /* Core brand colors — extracted from logo SVG */
   --brand-primary:  #B1D082;
   --brand-light:    #C8E0A0;
   --brand-dark:     #2B473C;
-  --light-bg:       #F4F2EC;
-  --light-border:   #E2DDD0;
-  --dark-bg:        #1A2420;
-  --dark-surface:   #22302A;
-  --text-primary:   #2B473C;
-  --text-muted:     #5A6B5E;
-  --text-on-dark:   #F4F2EC;
-  --gradient:       linear-gradient(140deg, #1A2420 0%, #2B473C 60%, #4A7A5A 100%);
 
-  /* ─── v2 Design Tokens ──────────────────────────────────────────────────── */
-  /* Arch mask — the site's visual signature (matches logo arch form) */
+  --page-bg:        #FFFFFF;
+  --section-alt:    #F0F3EE;
+  --section-dark:   #1A2420;
+  --dark-surface:   #22302A;
+  --card-bg:        #FFFFFF;
+
+  --text-primary:   #111111;
+  --text-body:      #4B5563;
+  --text-muted:     #6B7280;
+  --text-on-dark:   #F5F5F5;
+
+  --border:         #E5E7EB;
+  --border-green:   #D1E4B8;
+  --light-border:   #E5E7EB;
+  --light-bg:       #FFFFFF;
+  --dark-bg:        #1A2420;
+  --section-light:  #F0F3EE;
+  --section-white:  #FFFFFF;
+
+  --card-radius:       12px;
+  --card-shadow:       0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+  --card-shadow-hover: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+
+  --oval-radius: 50%;
+  --btn-radius:  8px;
+  --pill-radius: 999px;
   --arch-radius: 50% 50% 0 0 / 60% 60% 0 0;
 
-  /* Unified card system */
-  --card-radius:       16px;
-  --card-shadow:       0 2px 16px rgba(43,71,60,0.07), 0 1px 4px rgba(43,71,60,0.04);
-  --card-shadow-hover: 0 8px 32px rgba(43,71,60,0.12), 0 2px 8px rgba(43,71,60,0.06);
+  --star-color:  #B1D082;
+  --gradient: linear-gradient(140deg, #1A2420 0%, #2B473C 60%, #4A7A5A 100%);
 
-  /* Section backgrounds — light-first pattern */
-  --section-light: #F4F2EC;   /* primary — cream, dominant */
-  --section-white: #FFFFFF;   /* elevated surfaces, card interiors */
-  --section-dark:  #1A2420;   /* reserved — used sparingly */
-
-  /* Decorative arc accent */
-  --arc-color:   #B1D082;
-  --arc-opacity: 0.6;
-
-  /* Typography */
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body:    'Outfit', system-ui, sans-serif;
   --font-devanagari: 'Noto Sans Devanagari', system-ui, sans-serif;
 
-  /* Breakpoints */
-  --bp-sm:  480px;
-  --bp-md:  768px;
-  --bp-lg:  1024px;
-  --bp-xl:  1280px;
+  --bp-sm: 480px; --bp-md: 768px; --bp-lg: 1024px; --bp-xl: 1280px;
 }
 
 /* ─── Reset ────────────────────────────────────────────────────────────────── */
@@ -96,8 +95,8 @@ body[lang="mr"] em {
 body {
   font-size: 16px;
   line-height: 1.65;
-  color: var(--text-primary);
-  background: #ffffff;
+  color: var(--text-body);
+  background: var(--page-bg);
   -webkit-font-smoothing: antialiased;
 }
 

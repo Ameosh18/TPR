@@ -1,6 +1,6 @@
 .strip {
-  background: #ffffff;
-  border-bottom: 1px solid #f0ede6;
+  background: var(--section-alt);
+  border-bottom: 1px solid var(--border);
   padding: 40px 0;
 }
 
@@ -16,7 +16,7 @@
   align-items: center;
   gap: 6px;
   padding: 8px 16px;
-  border-right: 1px solid #ede9e0;
+  border-right: 1px solid var(--border);
 }
 
 .item:last-child { border-right: none; }
@@ -41,8 +41,8 @@
 @media (max-width: 768px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .item:nth-child(2) { border-right: none; }
-  .item:nth-child(3) { border-right: 1px solid #ede9e0; border-top: 1px solid #ede9e0; }
-  .item:nth-child(4) { border-right: none; border-top: 1px solid #ede9e0; }
+  .item:nth-child(3) { border-right: 1px solid var(--border); border-top: 1px solid var(--border); }
+  .item:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
 }
 
 @media (max-width: 480px) {
