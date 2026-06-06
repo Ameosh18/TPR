@@ -12,17 +12,17 @@ export const translations = {
     },
 
     hero: {
-      line1: 'Relieve Pain,',
-      line2: 'Restore Mobility',
-      line3: '& Strength —',
-      line4: 'Body & Mind',
-      sub: 'Targeted care focused on relieving pain, improving movement, and restoring everyday comfort through guided, personalised hands-on treatment.',
-      bookBtn: 'Book Appointment',
-      servicesBtn: 'Our Services',
-      float1a: 'Personalised',
-      float1b: 'Physiotherapy Treatment',
-      float2a: 'Qualified and Trained',
-      float2b: 'Physiotherapy Experts',
+      line1: 'Your body deserves',
+      line2: 'more than a diagnosis',
+      line3: 'and a sheet of',
+      line4: 'exercises.',
+      sub: 'Evidence-based physiotherapy in Kothrud, Pune — tailored to you, not a template.',
+      bookBtn: 'Book a Consultation',
+      servicesBtn: 'See how it works',
+      float1a: '9+ years',
+      float1b: 'Clinical Experience',
+      float2a: 'Evidence-based',
+      float2b: 'Personalised Care',
     },
 
     stats: [
@@ -33,9 +33,9 @@ export const translations = {
     ],
 
     about: {
-      tag: '· About Us',
-      heading1: 'Advanced Care Solutions In',
-      heading2: 'Physiotherapy Care',
+      tag: '· About Dr. Oshin',
+      heading1: 'Dr. Oshin Ninawe',
+      heading2: 'Kulkarni',
       missionTitle: 'Mission',
       missionText: 'To provide evidence-based physiotherapy care focused on recovery, mobility, and adding physical well-being for all patients.',
       visionTitle: 'Vision',
@@ -296,17 +296,17 @@ export const translations = {
     },
 
     hero: {
-      line1: 'वेदना कमी करा,',
-      line2: 'गतिशीलता परत',
-      line3: 'मिळवा —',
-      line4: 'शरीर आणि मन',
-      sub: 'वेदना कमी करण्यावर, हालचाल सुधारण्यावर आणि दैनंदिन जीवन आरामदायी करण्यावर लक्ष केंद्रित केलेली, मार्गदर्शित, वैयक्तिकृत हाताने दिलेली काळजी.',
-      bookBtn: 'अपॉइंटमेंट बुक करा',
-      servicesBtn: 'आमच्या सेवा',
-      float1a: 'वैयक्तिकृत',
-      float1b: 'फिजिओथेरपी उपचार',
-      float2a: 'पात्र आणि प्रशिक्षित',
-      float2b: 'फिजिओथेरपी तज्ञ',
+      line1: 'तुमच्या शरीराला',
+      line2: 'निदान आणि व्यायामाच्या',
+      line3: 'यादीपेक्षा',
+      line4: 'अधिक हवे आहे.',
+      sub: 'कोथरूड, पुण्यातील पुराव्यावर आधारित फिजिओथेरपी — तुमच्यासाठी, टेम्पलेटनुसार नाही.',
+      bookBtn: 'सल्लामसलत बुक करा',
+      servicesBtn: 'हे कसे कार्य करते ते पाहा',
+      float1a: '९+ वर्षे',
+      float1b: 'क्लिनिकल अनुभव',
+      float2a: 'पुराव्यावर आधारित',
+      float2b: 'वैयक्तिकृत काळजी',
     },
 
     stats: [
@@ -317,9 +317,9 @@ export const translations = {
     ],
 
     about: {
-      tag: '· आमच्याबद्दल',
-      heading1: 'फिजिओथेरपीमध्ये प्रगत',
-      heading2: 'उपचार उपाय',
+      tag: '· डॉ. ओशिन यांच्याबद्दल',
+      heading1: 'डॉ. ओशिन निनावे',
+      heading2: 'कुलकर्णी',
       missionTitle: 'ध्येय',
       missionText: 'सर्व रुग्णांसाठी पुनर्प्राप्ती, गतिशीलता आणि शारीरिक स्वास्थ्यावर लक्ष केंद्रित करणारी पुराव्यावर आधारित फिजिओथेरपी काळजी प्रदान करणे.',
       visionTitle: 'दृष्टी',

@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from '../Button/Button'
 import { useLanguage } from '../../contexts/LanguageContext'
+import useScrollHeader from '../../hooks/useScrollHeader'
 import styles from './Nav.module.css'
 
-export default function Nav() {
+export default function Nav({ forceSolid = false }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const { lang, toggle, t } = useLanguage()
+  const scrolled = useScrollHeader(60)
+  const solid = forceSolid || scrolled
 
   // Set <html lang> for Devanagari font switching
   useEffect(() => {
@@ -24,7 +27,7 @@ export default function Nav() {
   ]
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${solid ? styles.solid : styles.transparent}`}>
       <div className={`container ${styles.inner}`}>
         <NavLink to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="The Physio Room" height="36" />

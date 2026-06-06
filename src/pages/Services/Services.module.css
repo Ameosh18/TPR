@@ -1,4 +1,4 @@
-.hero { background: linear-gradient(125deg, #2C5016 0%, #1C2E10 30%, #3A6820 60%, #8AB860 100%); padding: 160px 0 80px; }
+.hero { background: linear-gradient(125deg, #2B473C 0%, #1A2420 30%, #2B473C 60%, #B1D082 100%); padding: 160px 0 80px; }
 .heroInner { max-width: 720px; }
 .tag { color: var(--brand-light); display: block; margin-bottom: 12px; }
 .headline { color: var(--text-on-dark); margin-bottom: 16px; }

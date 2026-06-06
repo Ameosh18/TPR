@@ -19,12 +19,15 @@ function ScrollToTop() {
 }
 
 function Layout() {
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+
   return (
     <div className={styles.pageWrap}>
       <div className={styles.appCard}>
         <ScrollToTop />
-        <Nav />
-        <main>
+        <Nav forceSolid={!isHome} />
+        <main style={isHome ? undefined : { paddingTop: '72px' }}>
           <Outlet />
         </main>
         <Footer />

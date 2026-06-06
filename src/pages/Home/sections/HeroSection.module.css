@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: flex-end;
   background:
-    linear-gradient(140deg, #1C2E10 0%, #2C5016 35%, #4A7C28 65%, #A8CC78 100%);
+    linear-gradient(140deg, #1A2420 0%, #2B473C 35%, #4A7A5A 65%, #B1D082 100%);
   overflow: hidden;
 }
 
@@ -51,7 +51,7 @@
 
 .headline em {
   font-style: italic;
-  color: #C4DE9A;
+  color: #C8E0A0;
 }
 
 .sub {
@@ -90,7 +90,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #C4DE9A;
+  background: #C8E0A0;
   flex-shrink: 0;
 }
 
