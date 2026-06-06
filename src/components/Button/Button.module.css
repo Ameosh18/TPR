@@ -8,19 +8,22 @@
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.3px;
-  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
   white-space: nowrap;
 }
 
-.btn:hover { transform: scale(1.02); }
-.btn:active { transform: scale(0.98); }
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(43,71,60,0.2);
+}
+.btn:active { transform: translateY(0); box-shadow: none; }
 
 .primary {
   background: var(--brand-dark);
   color: var(--light-bg);
 }
-.primary:hover { background: #2e3a1c; }
+.primary:hover { background: var(--brand-dark); }
 
 .ghost {
   background: transparent;

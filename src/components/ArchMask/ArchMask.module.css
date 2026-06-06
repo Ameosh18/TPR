@@ -1,0 +1,37 @@
+.mask {
+  border-radius: var(--arch-radius);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, var(--brand-light) 0%, var(--brand-primary) 60%, var(--brand-dark) 100%);
+  opacity: 0.25;
+}
+
+.mask--lg  { width: 260px; height: 340px; }
+.mask--md  { width: 200px; height: 260px; }
+.mask--sm  { width: 140px; height: 185px; }
+.mask--xs  { width: 100px; height: 130px; }
+
+.mask--bordered {
+  outline: 3px solid var(--brand-primary);
+  outline-offset: 5px;
+}
+
+@media (max-width: 768px) {
+  .mask--lg  { width: 200px; height: 260px; }
+  .mask--md  { width: 160px; height: 210px; }
+  .mask--sm  { width: 110px; height: 145px; }
+}

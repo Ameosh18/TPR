@@ -23,6 +23,14 @@ export const translations = {
       float1b: 'Clinical Experience',
       float2a: 'Evidence-based',
       float2b: 'Personalised Care',
+      locationTag: 'Kothrud, Pune',
+      processBtn: 'See how it works',
+      stat1num: '9+',
+      stat1label: 'Years Experience',
+      stat2num: '1,000+',
+      stat2label: 'Patients Treated',
+      stat3num: '100%',
+      stat3label: 'Personalised Care',
     },
 
     stats: [
@@ -307,6 +315,14 @@ export const translations = {
       float1b: 'क्लिनिकल अनुभव',
       float2a: 'पुराव्यावर आधारित',
       float2b: 'वैयक्तिकृत काळजी',
+      locationTag: 'कोथरूड, पुणे',
+      processBtn: 'हे कसे काम करते ते पाहा',
+      stat1num: '९+',
+      stat1label: 'वर्षांचा अनुभव',
+      stat2num: '१,०००+',
+      stat2label: 'रुग्ण उपचारित',
+      stat3num: '१००%',
+      stat3label: 'वैयक्तिकृत काळजी',
     },
 
     stats: [

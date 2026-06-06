@@ -1,15 +1,16 @@
 .hero {
-  background: linear-gradient(155deg, #22302A 0%, #1A2420 25%, #4A7A5A 65%, #C8E0A0 100%);
+  background: var(--section-light);
   padding: 160px 0 80px;
+  border-bottom: 1px solid var(--light-border);
 }
 
 .heroInner { max-width: 700px; }
 
-.tag { color: var(--brand-light); display: block; margin-bottom: 12px; }
+.tag { color: var(--brand-primary); display: block; margin-bottom: 12px; }
 
-.headline { color: var(--text-on-dark); margin-bottom: 16px; }
+.headline { color: var(--text-primary); margin-bottom: 16px; }
 
-.sub { font-size: 17px; color: rgba(245,242,235,0.7); line-height: 1.7; }
+.sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
 
 .main { background: var(--light-bg); }
 

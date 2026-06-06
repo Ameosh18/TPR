@@ -1,22 +1,22 @@
 .hero {
-  background: linear-gradient(150deg, #1A2420 0%, #2B473C 45%, #4A7A5A 80%, #B1D082 100%);
+  background: var(--section-light);
   padding: 160px 0 96px;
-  border-bottom: 1px solid rgba(168,204,120,0.15);
+  border-bottom: 1px solid var(--light-border);
 }
 
 .heroInner { max-width: 800px; }
 
 .heroContent { display: flex; flex-direction: column; gap: 24px; }
 
-.tag { color: var(--brand-light); }
+.tag { color: var(--brand-primary); }
 
 .heroQuote {
   font-size: clamp(28px, 4vw, 48px);
-  color: var(--text-on-dark);
+  color: var(--brand-dark);
   line-height: 1.2;
 }
 
-.heroCreds { font-size: 14px; color: rgba(245,242,235,0.5); letter-spacing: 0.5px; }
+.heroCreds { font-size: 14px; color: var(--text-muted); letter-spacing: 0.5px; }
 
 /* Story */
 .story { background: var(--light-bg); }
