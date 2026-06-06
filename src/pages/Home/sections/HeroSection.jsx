@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* LEFT */}
         <div className={styles.left}>
           <h1 className={styles.headline}>
-            {h.line1}<br />{h.line2}<br /><em>{h.line3}</em>
+            {h.line1}<br />{h.line2}<br />{h.line3}<br /><em>{h.line4}</em>
           </h1>
           <p className={styles.sub}>{h.sub}</p>
           <div className={styles.ctas}>
