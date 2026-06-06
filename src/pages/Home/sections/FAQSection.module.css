@@ -23,7 +23,7 @@
 .tag {
   font-size: 13px;
   font-weight: 600;
-  color: var(--brand-primary);
+  color: var(--brand-dark);
   letter-spacing: 0.5px;
 }
 
