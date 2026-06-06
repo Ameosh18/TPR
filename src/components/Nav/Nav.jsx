@@ -30,7 +30,11 @@ export default function Nav({ forceSolid = false }) {
     <nav className={`${styles.nav} ${solid ? styles.solid : styles.transparent}`}>
       <div className={`container ${styles.inner}`}>
         <NavLink to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="The Physio Room" height="36" />
+          <img
+            src={`${import.meta.env.BASE_URL}${solid ? 'logo-color.png' : 'logo.png'}`}
+            alt="The Physio Room"
+            height="36"
+          />
         </NavLink>
 
         <ul className={styles.links}>
