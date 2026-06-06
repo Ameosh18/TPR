@@ -1,8 +1,8 @@
-.hero { background: linear-gradient(145deg, #1A2420 0%, #4A7A5A 45%, #2B473C 75%, #C8E0A0 100%); padding: 160px 0 80px; }
+.hero { background: var(--section-light); padding: 160px 0 80px; border-bottom: 1px solid var(--light-border); }
 .heroInner { max-width: 680px; }
-.tag { color: var(--brand-light); display: block; margin-bottom: 12px; }
-.headline { color: var(--text-on-dark); margin-bottom: 16px; }
-.sub { font-size: 17px; color: rgba(245,242,235,0.7); line-height: 1.7; }
+.tag { color: var(--brand-primary); display: block; margin-bottom: 12px; }
+.headline { color: var(--text-primary); margin-bottom: 16px; }
+.sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
 
 .main { background: var(--light-bg); }
 
