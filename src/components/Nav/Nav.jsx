@@ -20,6 +20,7 @@ export default function Nav() {
     { to: '/conditions', label: t.nav.conditions },
     { to: '/process',    label: t.nav.process },
     { to: '/blog',       label: t.nav.blog },
+    { to: '/contact',    label: t.nav.contact },
   ]
 
   return (

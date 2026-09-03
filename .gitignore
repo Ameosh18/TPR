@@ -2,3 +2,12 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# Local Kavi/analyzthis_design skill sync — not part of the project
+.agents/
+.claude/commands/knowledge-bank.md
+.claude/skills/knowledge-bank/
+.codeium/
+.codex/
+.cursor/
+.grok/
