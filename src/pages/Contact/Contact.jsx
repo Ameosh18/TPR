@@ -11,7 +11,20 @@ export default function Contact() {
   const c = t.contactPage
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-  const submit = e => { e.preventDefault(); setSent(true) }
+  const submit = e => {
+    e.preventDefault()
+    const subject = `New enquiry: ${form.reason || 'General'} — ${form.name}`
+    const body = [
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      `Email: ${form.email}`,
+      `Reason: ${form.reason || 'Not specified'}`,
+      '',
+      form.message,
+    ].join('\n')
+    window.location.href = `mailto:hello@thephysioroom.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setSent(true)
+  }
 
   return (
     <>
