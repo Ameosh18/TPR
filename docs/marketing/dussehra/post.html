@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand-primary: #A8CC78;
+    --brand-light:   #C4DE9A;
+    --brand-dark:    #2C5016;
+    --dark-bg:       #1C2E10;
+    --text-on-dark:  #F2F7EA;
+    --muted:         #8FA67C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    background: var(--dark-bg);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow: hidden;
+  }
+
+  .post {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 620px at 72% 56%, rgba(168,204,120,0.16) 0%, rgba(168,204,120,0) 70%),
+      linear-gradient(160deg, #1C2E10 0%, #223812 55%, #1C2E10 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 80px 64px;
+  }
+
+  /* faint arch echoing the logo mark */
+  .arch {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    width: 620px;
+    height: 620px;
+    border: 2px solid rgba(168,204,120,0.07);
+    border-bottom: none;
+    border-radius: 310px 310px 0 0;
+  }
+
+  .eyebrow {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--brand-primary);
+  }
+
+  .rule {
+    position: relative;
+    width: 56px;
+    height: 2px;
+    background: var(--brand-primary);
+    opacity: 0.55;
+    margin: 26px 0 30px;
+  }
+
+  h1 {
+    position: relative;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 500;
+    font-size: 112px;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    color: var(--text-on-dark);
+    text-align: center;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--brand-light);
+  }
+
+  .sub {
+    position: relative;
+    margin-top: 30px;
+    max-width: 840px;
+    font-size: 28px;
+    line-height: 1.55;
+    color: #9DB488;
+    text-align: center;
+  }
+
+  .art {
+    position: relative;
+    margin-top: 44px;
+    width: 780px;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hairline {
+    width: 100%;
+    height: 1px;
+    background: rgba(168,204,120,0.22);
+    margin-bottom: 34px;
+  }
+
+  .logo { height: 76px; width: auto; }
+
+  .handle {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--brand-primary);
+  }
+</style>
+</head>
+<body>
+  <div class="post">
+    <div class="arch"></div>
+
+    <div class="eyebrow">Happy Dussehra</div>
+    <div class="rule"></div>
+
+    <h1>Ten heads.<br><em>One arrow.</em></h1>
+
+    <p class="sub">
+      Back pain. Stiff neck. Weak knees. That old injury you learned to live with.
+      Pick the one that rules you, and take aim.
+    </p>
+
+    <svg class="art" viewBox="0 0 620 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- draw-back motion lines behind the nock -->
+      <line x1="15" y1="155" x2="52" y2="155" stroke="#A8CC78" stroke-width="4" stroke-linecap="round" opacity="0.22"/>
+      <line x1="26" y1="118" x2="58" y2="118" stroke="#A8CC78" stroke-width="4" stroke-linecap="round" opacity="0.14"/>
+      <line x1="26" y1="192" x2="58" y2="192" stroke="#A8CC78" stroke-width="4" stroke-linecap="round" opacity="0.14"/>
+
+      <!-- bow limbs -->
+      <path d="M150 25 C 235 90, 235 220, 150 285" stroke="#A8CC78" stroke-width="9" stroke-linecap="round"/>
+      <!-- bowstring, drawn back to the nock -->
+      <path d="M150 25 L 92 155 L 150 285" stroke="#C4DE9A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+      <!-- arrow shaft -->
+      <line x1="92" y1="155" x2="490" y2="155" stroke="#F2F7EA" stroke-width="6" stroke-linecap="round"/>
+      <!-- fletching, swept back toward the nock -->
+      <path d="M144 155 L 106 130 M144 155 L 106 180 M176 155 L 138 130 M176 155 L 138 180"
+            stroke="#C4DE9A" stroke-width="5" stroke-linecap="round"/>
+      <!-- arrowhead -->
+      <path d="M518 155 L 470 131 L 470 179 Z" fill="#F2F7EA"/>
+
+      <!-- Ravana's ten heads -->
+      <circle cx="575" cy="11"  r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="35"  r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="59"  r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="83"  r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="107" r="10" fill="#A8CC78" opacity="0.38"/>
+      <!-- the one taking the hit -->
+      <circle cx="575" cy="155" r="24" stroke="#F2F7EA" stroke-width="6"/>
+      <path d="M559 139 L 591 171 M591 139 L 559 171" stroke="#F2F7EA" stroke-width="6" stroke-linecap="round"/>
+      <path d="M598 132 L 605 125 M598 178 L 605 185 M552 178 L 545 185"
+            stroke="#F2F7EA" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+      <circle cx="575" cy="203" r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="227" r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="251" r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="275" r="10" fill="#A8CC78" opacity="0.38"/>
+      <circle cx="575" cy="299" r="10" fill="#A8CC78" opacity="0.38"/>
+    </svg>
+
+    <div class="footer">
+      <div class="hairline"></div>
+      <img class="logo" src="logo.png" alt="The Physio Room, Rehab Reimagined">
+      <div class="handle">@tpr_rehabreimagined</div>
+    </div>
+  </div>
+</body>
+</html>
